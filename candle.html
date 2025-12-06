@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candle Beerry | Handcrafted Scents</title>
+    <style>
+        /* --- CSS STYLES --- */
+        
+        /* 1. Global Reset & Fonts */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #FDFBF7; /* Creamy White */
+            color: #333;
+            line-height: 1.6;
+        }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* 2. Color Variables */
+        :root {
+            --primary: #8D021F; /* Berry Red */
+            --secondary: #D4AF37; /* Muted Gold */
+            --bg-light: #FDFBF7;
+            --text-dark: #1a1a1a;
+        }
+
+        /* 3. Navigation */
+        header {
+            background: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+        nav ul { display: flex; gap: 30px; }
+        nav a { font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--primary); }
+        .cart-icon { font-weight: bold; color: var(--primary); }
+
+        /* 4. Hero Section */
+        .hero {
+    background-color: #f4ece6;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                      url("https://tse2.mm.bing.net/th/id/OIP.XW4WyQXNzExRguZcvHV0twHaE6?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+ero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.2s, background 0.3s;
+            display: inline-block;
+        }
+        .btn:hover {
+            background-color: #5c0113;
+            transform: translateY(-3px);
+        }
+
+        /* 5. Product Section */
+        .products { padding: 80px 50px; text-align: center; }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        .section-subtitle { margin-bottom: 50px; color: #666; }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            transition: box-shadow 0.3s;
+        }
+        .product-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .product-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            background-color: #ddd;
+        }
+        .product-name { font-size: 1.2rem; margin-bottom: 5px; font-weight: bold; }
+        .product-price { color: var(--primary); font-weight: bold; margin-bottom: 15px; display: block; }
+
+        /* 6. About Section */
+        .about {
+            background-color: #fff;
+            padding: 80px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .about-text { max-width: 500px; }
+        .about-text h2 { color: var(--primary); margin-bottom: 20px; font-size: 2rem; }
+        .about-img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 50%; /* Circle image */
+        }
+
+        /* 7. Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+        .footer-links { margin-bottom: 20px; }
+        .footer-links a { margin: 0 15px; color: #aaa; }
+        .footer-links a:hover { color: white; }
+        .social-link { color: var(--primary); font-weight: bold; }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; padding: 20px; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .about { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">CANDLE BEERRY</div>
+        <nav>
+            <ul>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#" class="cart-icon">Cart (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Light Up Your Moment</h1>
+            <p>Hand-poured soy candles crafted with premium ingredients and nostalgic scents.</p>
+            <a href="#" class="btn">Shop The Collection</a>
+        </div>
+    </section>
+
+    <section class="products">
+        <h2 class="section-title">Best Sellers</h2>
+        <p class="section-subtitle">Our most loved scents, curated for you.</p>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="C:\Users\vivek\Downloads\Screenshot 2025-12-06 192918.png"alt="Berry Candle" class="product-img">
+                <h3 class="product-name">Winter Berry Bliss</h3>
+                <span class="product-price">$24.00</span>
+                <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Add to Cart</a>
+            </div>
+
+            <div class="product-card">
+                <img src="C:\Users\vivek\Downloads\Screenshot 2025-12-06 192720.png" alt="Vanilla Candle" class="product-img">
+                <h3 class="product-name">Golden Vanilla</h3>
+                <span class="product-price">$22.00</span>
+                <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Add to Cart</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pine Candle" class="product-img">
+                <h3 class="product-name">Forest Whisper</h3>
+                <span class="product-price">$26.00</span>
+                <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Add to Cart</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <img src="https://images.unsplash.com/photo-1602167389868-2437293a2072?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Making Candles" class="about-img">
+        <div class="about-text">
+            <h2>The Candle Beerry Story</h2>
+            <p>Every candle we make is hand-poured with love. We use eco-friendly soy wax and phthalate-free fragrances to ensure a clean burn that fills your home with warmth and comfort.</p>
+            <br>
+            <a href="#" style="color: #8D021F; font-weight: bold; border-bottom: 2px solid #8D021F;">Read More About Us</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Shipping Policy</a>
+            <a href="#">Returns</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <p>&copy; 2024 Candle Beerry. Follow us on <a href="https://www.instagram.com/candlebeerry" class="social-link">Instagram</a>.</p>
+    </footer>
+
+</body>
+</html>
